@@ -1,0 +1,6 @@
+mainmodule:"laya.core"
+path:"../../../../laya/libs/LayaAir/core/src"
+
+
+module:"code"
+path:"src/laya/ide/plugin"
