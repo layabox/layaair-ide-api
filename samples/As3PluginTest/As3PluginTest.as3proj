@@ -16,9 +16,8 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
-    <class path="..\..\..\..\..\laya\libs\LayaAir\core\src" />
-    <class path="..\..\..\..\..\laya\libs\LayaAir\ui\src" />
-    <class path="..\..\editorAPI\src" />
+    <class path="..\..\ide\src" />
+    <class path="E:\trank\libs\LayaAir\publish\LayaAirPublish\bin\as\libs\src" />
   </classpaths>
   <!-- Build options -->
   <build>

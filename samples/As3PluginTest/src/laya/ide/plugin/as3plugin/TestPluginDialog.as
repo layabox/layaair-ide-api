@@ -1,29 +1,27 @@
-package laya.ide.plugin.as3plugin 
-{
+package laya.ide.plugin.as3plugin {
 	import ide.managers.Notice;
 	import laya.events.Event;
 	import laya.ide.plugin.PluginDialog;
 	import laya.ui.Box;
 	import laya.ui.Button;
 	import laya.ui.Label;
+	
 	/**
 	 * 弹出框式插件Demo
 	 * 本demo演示如何创建一个自己的对话框
 	 */
-	public class TestPluginDialog extends PluginDialog
-	{
+	public class TestPluginDialog extends PluginDialog {
+		public var text:Label;
 		
-		public function TestPluginDialog() 
-		{
+		public function TestPluginDialog() {
 			creatUI();
 			init();
 		}
-		public var text:Label;
+		
 		/**
 		 * 创建UI
 		 */
-		private function creatUI():void
-		{
+		private function creatUI():void {
 			var box:Box;
 			box = new Box();
 			text = new Label();
@@ -42,23 +40,21 @@ package laya.ide.plugin.as3plugin
 			btn.on(Event.MOUSE_DOWN, this, btnClick);
 			setContent(box);
 		}
+		
 		/**
 		 * 点击关闭
 		 */
-		private function btnClick():void
-		{
+		private function btnClick():void {
 			this.close();
 		}
+		
 		/**
 		 * 初始化时创建消息监听
 		 */
-		public function init():void
-		{
+		public function init():void {
 			//监听注册的菜单消息
 			Notice.listen("openas3Dialog", this, this.popup);
 			Notice.listen("closeas3Dialog", this, this.close);
 		}
-		
 	}
-
 }

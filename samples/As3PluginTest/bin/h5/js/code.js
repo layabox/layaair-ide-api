@@ -19,6 +19,9 @@
 
 		__class(TestPlugin,'laya.ide.plugin.as3plugin.TestPlugin',_super);
 		var __proto=TestPlugin.prototype;
+		/**
+		*创建UI
+		*/
 		__proto.creatUI=function(){
 			this.text=new Label();
 			this.text.color="#ff0000";
@@ -26,12 +29,18 @@
 			this.text.top=this.text.bottom=this.text.left=this.text.right=0;
 		}
 
+		/**
+		*初始化时创建消息监听
+		*/
 		__proto.init=function(){
 			Notice.listen(/*laya.ide.event.IDEEvent.PROPPANEL_SETBYOBJ*/"",this,this.initByObj);
 			Notice.listen("openas3plugin",this,this.show);
 			Notice.listen("closeas3plugin",this,this.close);
 		}
 
+		/**
+		*显示数据
+		*/
 		__proto.initByObj=function(data,name,id){
 			var tKey;
 			var tStr="";
@@ -62,6 +71,9 @@
 
 		__class(TestPluginDialog,'laya.ide.plugin.as3plugin.TestPluginDialog',_super);
 		var __proto=TestPluginDialog.prototype;
+		/**
+		*创建UI
+		*/
 		__proto.creatUI=function(){
 			var box;
 			box=new Box();
@@ -82,10 +94,16 @@
 			this.setContent(box);
 		}
 
+		/**
+		*点击关闭
+		*/
 		__proto.btnClick=function(){
 			this.close();
 		}
 
+		/**
+		*初始化时创建消息监听
+		*/
 		__proto.init=function(){
 			Notice.listen("openas3Dialog",this,this.popup);
 			Notice.listen("closeas3Dialog",this,this.close);
