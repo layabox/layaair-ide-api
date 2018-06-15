@@ -1,4 +1,5 @@
 package laya.ide.managers {
+	import laya.maths.Point;
 	
 	/**
 	 * IDE API函数
@@ -12,6 +13,14 @@ package laya.ide.managers {
 		 * @param refresh 是否重新刷新整个视图
 		 */
 		public static function nodeChange(nodeData:Object, changeProps:Array, refresh:Boolean = false):void {
+		}
+		
+		/**
+		 * 通知页面数据变化 
+		 * 
+		 */		
+		public static function noticePageChanged():void
+		{
 		}
 		
 		/**
@@ -84,6 +93,60 @@ package laya.ide.managers {
 		 * 导出非图集资源的目录
 		 */
 		public static function get asynResExportPath():String {
+			return null;
+		}
+		
+		/**
+		 * 是否是预览状态 
+		 */
+		public static function get isPreview():Boolean
+		{
+			return false;
+		}
+		
+		/**
+		 * 获取节点
+		 * @param nodeID
+		 * @return 
+		 * 
+		 */	
+		public static function getNodeByNodeID(nodeID:int):*
+		{
+			return null;
+		}
+		
+		/**
+		 * 获取节点 
+		 * @param nodeRefer
+		 * @return 
+		 * 
+		 */		
+		public static function GetNodeByNodeRefer(nodeRefer:String):*
+		{
+			return null;
+		}
+		
+		/**
+		 * 全局坐标转design坐标 
+		 * @param point
+		 * @param createNew
+		 * @return 
+		 * 
+		 */		
+		public static function globalToDesignGlobal(point:Point,createNew:Boolean=false):Point
+		{
+			return null;
+		}
+		
+		/**
+		 * design坐标转全局坐标 
+		 * @param point
+		 * @param createNew
+		 * @return 
+		 * 
+		 */		
+		public static function DesignGlobalToGlobal(point:Point,createNew:Boolean=false):Point
+		{
 			return null;
 		}
 	}
